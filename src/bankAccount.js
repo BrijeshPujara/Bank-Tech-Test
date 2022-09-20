@@ -6,22 +6,26 @@ class BankAccount {
 
   depositAmmount(deposit) {
     this.amount += deposit;
-    this.transactions.push({
+    const new_transaction = {
       deposit: deposit,
       withdrawal: 0,
       balance: this.amount,
       date: new Date().toLocaleString(),
-    });
+    };
+
+    this.transactions.push(new_transaction);
   }
 
   withdrawalAmmount(withdrawal) {
     this.amount -= withdrawal;
-    this.transactions.push({
+    const new_transaction = {
       deposit: 0,
       withdrawal: withdrawal,
       balance: this.amount,
       date: new Date().toLocaleString(),
-    });
+    };
+
+    this.transactions.push(new_transaction);
   }
 
   totalTransactions() {
