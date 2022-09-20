@@ -32,6 +32,19 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
+## Installation
+1. Clone Repository
+```sh
+git clone https://github.com/BrijeshPujara/Bank-Tech-Test.git
+```
+2. Install dependencies
+```sh
+npm install
+```
+3. Run tests
+```sh
+npm run test
+```
 ## Self-assessment
 
 Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
