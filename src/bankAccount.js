@@ -42,12 +42,12 @@ class BankAccount {
 
 module.exports = BankAccount;
 
-const account = new BankAccount();
+// const account = new BankAccount();
 // account.depositAmmount(1000);
 // account.withdrawalAmmount(500);
 
-console.log(account.statement());
+// console.log(account.statement());
 
-account.depositAmmount(254.99)
+// account.depositAmmount(254.99)
 
-console.log(account.statement());
+// console.log(account.statement());

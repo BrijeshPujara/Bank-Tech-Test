@@ -11,13 +11,13 @@ describe("Bank Account", () => {
   it("should return empty transactions list", () => {
     expect(account.totalTransactions()).toEqual([]);
   });
-  it("should deposit a specified amount into account", () => {
+  it("should deposit 1000 into account", () => {
     account.depositAmmount(1000);
     expect(account.totalTransactions()).toEqual(
       expect.arrayContaining([expect.objectContaining({ deposit: 1000 })])
     );
   });
-  it("should withdraw a specified amount from the account ", () => {
+  it("should withdraw 500 from the account ", () => {
     account.withdrawalAmmount(500);
     expect(account.totalTransactions()).toEqual(
       expect.arrayContaining([expect.objectContaining({ withdrawal: 500 })])
@@ -32,7 +32,7 @@ describe("Bank Account", () => {
     );
   });
 
-  it("should return the length of transactions", () => {
+  it("should return the length of transactions as 2", () => {
     account.depositAmmount(2000);
     account.depositAmmount(1000);
     console.log(account.totalTransactions());
