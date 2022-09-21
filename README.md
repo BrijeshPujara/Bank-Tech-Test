@@ -4,9 +4,11 @@
 - ESLint
 - Jest Coverage
 - NodeJS
+
 ## Specification
 
 ### User Story
+
 ```
 As a client
 So I can get to see my banking transactions
@@ -19,6 +21,39 @@ I want to able to withdraw money from my account.
 As a client
 I want to able to see my transactional history.
 ```
+
+### Design
+
+```javascript
+# Class name
+class BankAccount {}
+
+# Deposit
+function depositAmount(deposit) {}
+
+# Withdraw
+function withdrawalAmount(withdrawal) {}
+
+# Statement
+function statement {}
+```
+
+Expected behavior
+
+```javascript
+const account = new BankAccount()
+account.deposit(1000)
+account.deposit(2000)
+account.withdraw(500)
+
+account.statement() =>   [
+  'date || credit || debit || balance \n',
+  '21/09/2022, 10:14:56| 1000| 0| 1000 \n ',
+  '21/09/2022, 10:14:56| 2000| 0| 3000 \n ',
+  '21/09/2022, 10:14:56| 0| 500| 2500 \n '
+]
+```
+
 ### Requirements
 
 - You should be able to interact with your code via a REPL like IRB or Node. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -42,18 +77,25 @@ date || credit || debit || balance
 ```
 
 ## Installation
+
 1. Clone Repository
+
 ```sh
 git clone https://github.com/BrijeshPujara/Bank-Tech-Test.git
 ```
+
 2. Install dependencies
+
 ```sh
 npm install
 ```
+
 3. Run tests
+
 ```sh
 npm run test
 ```
+
 ## Self-assessment
 
 Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
