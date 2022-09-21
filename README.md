@@ -1,9 +1,9 @@
 # Bank tech test
 
-- Test Driven Development - Unit tests(Jest)
+- Test Driven Development - Unit tests(Jest - Jest Coverage)
 - ESLint
-- Jest Coverage
 - NodeJS
+- Version Control(Github)
 
 ## Specification
 
@@ -25,16 +25,16 @@ I want to able to see my transactional history.
 ### Design
 
 ```javascript
-# Class name
+// Class name
 class BankAccount {}
 
-# Deposit
+// Deposit
 function depositAmount(deposit) {}
 
-# Withdraw
+// Withdraw
 function withdrawalAmount(withdrawal) {}
 
-# Statement
+// Statement
 function statement {}
 ```
 
