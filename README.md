@@ -1,14 +1,13 @@
 # Bank tech test
 
-- Test Driven Development - Unit tests(Jest - Jest Coverage)
+- Test Driven Development - (Jest - Jest Coverage)
 - ESLint
 - NodeJS
-- Version Control(Github)
+- Version Control(Git)
 
 ## Specification
 
 ### User Story
-
 ```
 As a client
 So I can get to see my banking transactions
@@ -23,7 +22,6 @@ I want to able to see my transactional history.
 ```
 
 ### Design
-
 ```javascript
 // Class name
 class BankAccount {}
@@ -48,9 +46,9 @@ account.withdraw(500)
 
 account.statement() =>   [
   'date || credit || debit || balance \n',
-  '21/09/2022, 10:14:56| 1000| 0| 1000 \n ',
-  '21/09/2022, 10:14:56| 2000| 0| 3000 \n ',
-  '21/09/2022, 10:14:56| 0| 500| 2500 \n '
+  '21/09/2022, 10:14:56| 1000.00| 0| 1000.00 \n ',
+  '21/09/2022, 10:14:56| 2000.00| 0| 3000.00 \n ',
+  '21/09/2022, 10:14:56| 0| 500.00| 2500.00 \n '
 ]
 ```
 
