@@ -37,15 +37,6 @@ class BankAccount {
   totalTransactions() {
     return this.transactions.reverse();
   }
-
-  // Private functions
 }
 
 module.exports = BankAccount;
-
-// const account = new BankAccount();
-// account.depositAmount(1000);
-// account.depositAmount(2000);
-// account.withdrawalAmount(500);
-
-// console.log(account.totalTransactions());
