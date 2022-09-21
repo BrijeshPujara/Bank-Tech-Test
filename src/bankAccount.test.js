@@ -14,13 +14,14 @@ describe("Bank Account", () => {
   it("should deposit 1000 into account", () => {
     account.depositAmmount(1000);
     expect(account.totalTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ deposit: 1000 })])
+      expect.arrayContaining([expect.objectContaining({ "deposit": "1000.00" })])
     );
   });
   it("should withdraw 500 from the account ", () => {
+    account.depositAmmount(1000);
     account.withdrawalAmmount(500);
     expect(account.totalTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ withdrawal: 500 })])
+      expect.arrayContaining([expect.objectContaining({ "withdrawal": "500.00" })])
     );
   });
 
@@ -28,11 +29,11 @@ describe("Bank Account", () => {
     account.depositAmmount(1000);
     account.withdrawalAmmount(500);
     expect(account.totalTransactions()).toEqual(
-      expect.arrayContaining([expect.objectContaining({ balance: 500 })])
+      expect.arrayContaining([expect.objectContaining({ "balance": "500.00" })])
     );
   });
 
-  it("should return the length of transactions as 2", () => {
+  it("should return the length of transactions", () => {
     account.depositAmmount(2000);
     account.depositAmmount(1000);
     console.log(account.totalTransactions());
@@ -44,8 +45,8 @@ describe("Bank Account", () => {
     account.withdrawalAmmount(500);
     expect(account.statement()).toEqual([
       "date || credit || debit || balance \n",
-      "20/09/2022, 19:00:00| 2000| 0| 2000 \n ",
-      "20/09/2022, 19:00:00| 0| 500| 1500 \n ",
+      "20/09/2022, 19:00:00| 2000.00| 0| 2000.00 \n ",
+      "20/09/2022, 19:00:00| 0| 500.00| 1500.00 \n ",
     ]);
   });
 });

@@ -7,9 +7,9 @@ class BankAccount {
   depositAmmount(deposit) {
     this.amount += deposit;
     const new_transaction = {
-      deposit: deposit,
+      deposit: deposit.toFixed(2),
       withdrawal: 0,
-      balance: this.amount,
+      balance: this.amount.toFixed(2),
       date: new Date().toLocaleString(),
     };
 
@@ -20,8 +20,8 @@ class BankAccount {
     this.amount -= withdrawal;
     const new_transaction = {
       deposit: 0,
-      withdrawal: withdrawal,
-      balance: this.amount,
+      withdrawal: withdrawal.toFixed(2),
+      balance: this.amount.toFixed(2),
       date: new Date().toLocaleString(),
     };
 
@@ -52,4 +52,3 @@ account.depositAmmount(2000);
 account.withdrawalAmmount(500);
 
 console.log(account.statement());
-
