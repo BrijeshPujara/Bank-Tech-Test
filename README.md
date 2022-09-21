@@ -6,6 +6,19 @@
 - NodeJS
 ## Specification
 
+### User Story
+```
+As a client
+So I can get to see my banking transactions
+I want to able to deposit money into my account.
+
+As a client
+So I can get to see my banking transactions
+I want to able to withdraw money from my account.
+
+As a client
+I want to able to see my transactional history.
+```
 ### Requirements
 
 - You should be able to interact with your code via a REPL like IRB or Node. (You don't need to implement a command line interface that takes input from STDIN.)
