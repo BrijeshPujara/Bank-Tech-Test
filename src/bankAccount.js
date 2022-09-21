@@ -4,7 +4,7 @@ class BankAccount {
     this.transactions = [];
   }
 
-  depositAmmount(deposit) {
+  depositAmount(deposit) {
     if (deposit == null) {
       throw new Error("Please enter deposit amount");
     } else {
@@ -19,7 +19,7 @@ class BankAccount {
     }
   }
 
-  withdrawalAmmount(withdrawal) {
+  withdrawalAmount(withdrawal) {
     if (withdrawal == null) {
       throw new Error("Please enter withdrawal amount");
     } else {
@@ -35,32 +35,17 @@ class BankAccount {
   }
 
   totalTransactions() {
-    return this.transactions;
-  }
-
-  statement() {
-    return this.#statementList();
+    return this.transactions.reverse();
   }
 
   // Private functions
-
-  #statementList() {
-    this.total = ["date || credit || debit || balance \n"];
-    for (let i = 0; i < this.transactions.length; i++) {
-      const trans = this.transactions[i];
-      this.total.push(
-        `${trans.date}| ${trans.deposit}| ${trans.withdrawal}| ${trans.balance} \n `
-      );
-    }
-    return this.total;
-  }
 }
 
 module.exports = BankAccount;
 
 // const account = new BankAccount();
-// account.depositAmmount();
-// account.depositAmmount(2000);
-// account.withdrawalAmmount(500);
+// account.depositAmount(1000);
+// account.depositAmount(2000);
+// account.withdrawalAmount(500);
 
-// console.log(account.statement());
+// console.log(account.totalTransactions());
