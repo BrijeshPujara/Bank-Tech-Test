@@ -7,7 +7,7 @@
 
 ### Program preview
 
-[Alt text](//Users/brijeshpujara/Desktop/Bank-Tech-Test/Screenshot 2022-09-22 at 11.43.32.png?raw=true)
+[Alt text](/Users/brijeshpujara/Desktop/Bank-Tech-Test/Screenshot 2022-09-22 at 11.43.32.png?raw=true)
 
 ## Specification
 
