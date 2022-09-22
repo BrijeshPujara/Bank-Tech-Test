@@ -14,8 +14,8 @@ describe("Bank Statement", () => {
     account.withdrawalAmount(500);
     expect(statement.printStatement()).toEqual([
       "date || credit || debit || balance",
-      "23/09/2022| 0| 500.00| 1500.00",
-      "23/09/2022| 2000.00| 0| 2000.00",
+      "23/09/2022|| ||0|| ||500.00|| ||1500.00",
+      "23/09/2022|| ||2000.00|| ||0|| ||2000.00",
     ]);
   });
 });

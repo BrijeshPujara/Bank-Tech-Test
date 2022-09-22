@@ -15,7 +15,7 @@ class BankStatement {
 
     for (let i = 0; i < transaction.length; i++) {
       this.total.push(
-        `${transaction[i].date}| ${transaction[i].deposit}| ${transaction[i].withdrawal}| ${transaction[i].balance}`
+        `${transaction[i].date}|| ||${transaction[i].deposit}|| ||${transaction[i].withdrawal}|| ||${transaction[i].balance}`
       );
     }
     return this.total;
