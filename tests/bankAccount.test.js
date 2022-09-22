@@ -39,7 +39,6 @@ describe("Bank Account", () => {
   it("should return the length of transactions", () => {
     account.depositAmount(2000);
     account.depositAmount(1000);
-    console.log(account.viewTransactions());
     expect(account.viewTransactions().length).toEqual(2);
   });
 

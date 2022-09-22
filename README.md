@@ -7,7 +7,7 @@
 
 ### Program preview
 
-![](program.png)
+![](Coverage.png)
 
 ## Specification
 
@@ -39,22 +39,35 @@ function depositAmount(deposit) {}
 function withdrawalAmount(withdrawal) {}
 
 // Statement
-function statement {}
+function viewTransactions {}
 ```
+
+```javascript
+// Class name
+class BankStatement {}
+
+// Deposit
+function printStatement() {}
+
+// Private function to format statement
+function formatStatement() {}
+```
+
 
 Expected behavior
 
 ```javascript
 const account = new BankAccount()
+const statement = new BankStatement(account)
 account.deposit(1000)
 account.deposit(2000)
 account.withdraw(500)
 
-account.statement() =>   [
-  'date || credit || debit || balance \n',
-  '21/09/2022, 10:14:56| 1000.00| 0| 1000.00 \n ',
-  '21/09/2022, 10:14:56| 2000.00| 0| 3000.00 \n ',
-  '21/09/2022, 10:14:56| 0| 500.00| 2500.00 \n '
+statement.printStatement() =>   [
+  'date || credit || debit || balance',
+  '21/09/2022| 1000.00| 0| 1000.00',
+  '21/09/2022| 2000.00| 0| 3000.00',
+  '21/09/2022| 0| 500.00| 2500.00'
 ]
 ```
 
