@@ -5,9 +5,14 @@
 - NodeJS
 - Version Control(Git)
 
+### Program preview
+
+[Alt text](//Users/brijeshpujara/Desktop/Bank-Tech-Test/Screenshot 2022-09-22 at 11.43.32.png?raw=true)
+
 ## Specification
 
 ### User Story
+
 ```
 As a client
 So I can get to see my banking transactions
@@ -22,6 +27,7 @@ I want to able to see my transactional history.
 ```
 
 ### Design
+
 ```javascript
 // Class name
 class BankAccount {}

@@ -1,5 +1,3 @@
-const BankAccount = require("./bankAccount");
-
 class BankStatement {
   constructor(bankAccount) {
     this.account = bankAccount;
@@ -12,7 +10,7 @@ class BankStatement {
   // Private function
 
   #formatStatement() {
-    const transaction = this.account.totalTransactions();
+    const transaction = this.account.viewTransactions();
     this.total = ["date || credit || debit || balance"];
 
     for (let i = 0; i < transaction.length; i++) {

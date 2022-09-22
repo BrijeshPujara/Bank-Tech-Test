@@ -13,28 +13,28 @@ class BankAccount {
         deposit: deposit.toFixed(2),
         withdrawal: 0,
         balance: this.amount.toFixed(2),
-        date: new Date().toLocaleString(),
+        date: new Date().toLocaleDateString(),
       };
       this.transactions.push(new_transaction);
     }
   }
 
   withdrawalAmount(withdrawal) {
-    if (withdrawal == null) {
-      throw new Error("Please enter withdrawal amount");
+    if (withdrawal == null || this.amount < withdrawal) {
+      throw new Error("Please enter a valid withdrawal amount");
     } else {
       this.amount -= withdrawal;
       const new_transaction = {
         deposit: 0,
         withdrawal: withdrawal.toFixed(2),
         balance: this.amount.toFixed(2),
-        date: new Date().toLocaleString(),
+        date: new Date().toLocaleDateString(),
       };
       this.transactions.push(new_transaction);
     }
   }
 
-  totalTransactions() {
+  viewTransactions() {
     return this.transactions.reverse();
   }
 }

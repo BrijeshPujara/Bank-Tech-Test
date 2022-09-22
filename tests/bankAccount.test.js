@@ -10,18 +10,18 @@ describe("Bank Account", () => {
   });
 
   it("should return empty transactions list", () => {
-    expect(account.totalTransactions()).toEqual([]);
+    expect(account.viewTransactions()).toEqual([]);
   });
   it("should deposit 1000 into account", () => {
     account.depositAmount(1000);
-    expect(account.totalTransactions()).toEqual(
+    expect(account.viewTransactions()).toEqual(
       expect.arrayContaining([expect.objectContaining({ deposit: "1000.00" })])
     );
   });
   it("should withdraw 500 from the account ", () => {
     account.depositAmount(1000);
     account.withdrawalAmount(500);
-    expect(account.totalTransactions()).toEqual(
+    expect(account.viewTransactions()).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ withdrawal: "500.00" }),
       ])
@@ -31,7 +31,7 @@ describe("Bank Account", () => {
   it("should display the balance of a transaction", () => {
     account.depositAmount(1000);
     account.withdrawalAmount(500);
-    expect(account.totalTransactions()).toEqual(
+    expect(account.viewTransactions()).toEqual(
       expect.arrayContaining([expect.objectContaining({ balance: "500.00" })])
     );
   });
@@ -39,8 +39,8 @@ describe("Bank Account", () => {
   it("should return the length of transactions", () => {
     account.depositAmount(2000);
     account.depositAmount(1000);
-    console.log(account.totalTransactions());
-    expect(account.totalTransactions().length).toEqual(2);
+    console.log(account.viewTransactions());
+    expect(account.viewTransactions().length).toEqual(2);
   });
 
   it("should throw an error when there is no deposit amount entered ", () => {
@@ -57,17 +57,9 @@ describe("Bank Account", () => {
       account.withdrawalAmount();
     } catch (error) {
       expect(error).toBeInstanceOf(Error);
-      expect(error.message).toBe("Please enter withdrawal amount");
+      expect(error.message).toBe("Please enter a valid withdrawal amount");
     }
   });
 
-  it("should provide a breakdown of the transaction history formatted ", () => {
-    account.depositAmount(2000);
-    account.withdrawalAmount(500);
-    expect(account.printStatement()).toEqual([
-      "date || credit || debit || balance",
-      "20/09/2022, 19:00:00| 0| 500.00| 1500.00",
-      "20/09/2022, 19:00:00| 2000.00| 0| 2000.00",
-    ]);
-  });
+  
 });
